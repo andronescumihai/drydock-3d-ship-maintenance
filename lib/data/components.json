@@ -1,0 +1,1903 @@
+[
+  {
+    "id": "TANK-FO-P",
+    "name": "Fuel Oil Bunker Tank (Port)",
+    "systemId": "SYS-FUEL",
+    "compartmentId": "CMP-FUEL-P",
+    "position": {
+      "x": -22,
+      "y": 3.0,
+      "z": -5.2
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 14,
+        "y": 2.2,
+        "z": 1.4
+      }
+    },
+    "archetype": "tank",
+    "material": "steel-a36",
+    "criticality": 5,
+    "isSource": true,
+    "feeds": [
+      {
+        "to": "PUR-FO-01",
+        "resource": "fuel"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-FUEL-P-MANHOLE",
+    "hazards": [
+      "fuel-spill",
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 480,
+      "replaceMinutes": 14400,
+      "crewRequired": 3,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: port wing bunker tank, integral to the hull structure. Bunkers feed the separator rather than the engines directly."
+  },
+  {
+    "id": "SEA-CHEST-01",
+    "name": "Sea Chest & Strainer (low suction)",
+    "systemId": "SYS-COOL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -27,
+      "y": 0.5,
+      "z": 3.6
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.5,
+      "height": 1.0,
+      "axis": "y"
+    },
+    "archetype": "sea-chest",
+    "material": "steel-a36",
+    "criticality": 4,
+    "isSource": true,
+    "feeds": [
+      {
+        "to": "PMP-SW-01",
+        "resource": "seawater"
+      },
+      {
+        "to": "PMP-SW-02",
+        "resource": "seawater"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-SEACHEST",
+    "hazards": [
+      "flooding",
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 150,
+      "replaceMinutes": 2880,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: low sea suction with basket strainer. Cleaning requires closing the ship-side valve."
+  },
+  {
+    "id": "DG-01",
+    "name": "Diesel Generator No.1",
+    "systemId": "SYS-ELEC",
+    "compartmentId": "CMP-ER-PLAT",
+    "position": {
+      "x": -26,
+      "y": 4.4,
+      "z": -3.0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 3.6,
+        "y": 1.9,
+        "z": 1.5
+      }
+    },
+    "archetype": "generator-set",
+    "material": "cast-iron-gg25",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "SWB-MAIN-01",
+        "resource": "electrical"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-PLAT-DG1",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 5760,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: generator set running in parallel with DG-02. Either set alone can carry the demo load, so losing one does not black out the board."
+  },
+  {
+    "id": "DG-02",
+    "name": "Diesel Generator No.2",
+    "systemId": "SYS-ELEC",
+    "compartmentId": "CMP-ER-PLAT",
+    "position": {
+      "x": -26,
+      "y": 4.4,
+      "z": 3.0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 3.6,
+        "y": 1.9,
+        "z": 1.5
+      }
+    },
+    "archetype": "generator-set",
+    "material": "cast-iron-gg25",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "SWB-MAIN-01",
+        "resource": "electrical"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-PLAT-DG2",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 5760,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: identical to DG-01, mirrored to starboard. Parallel supplier of the same resource kind."
+  },
+  {
+    "id": "SWB-MAIN-01",
+    "name": "Main Switchboard 440V",
+    "systemId": "SYS-ELEC",
+    "compartmentId": "CMP-ECR",
+    "position": {
+      "x": -33.5,
+      "y": 4.4,
+      "z": -2.5
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 2.4,
+        "y": 2.0,
+        "z": 0.6
+      }
+    },
+    "archetype": "switchboard",
+    "material": "steel-a36",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "PMP-SW-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-SW-02",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-BILGE-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-BALLAST-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-FO-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-FW-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-LO-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PMP-FIRE-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PUR-FO-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "PUR-LO-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "COMP-AIR-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "COMP-AIR-02",
+        "resource": "electrical"
+      },
+      {
+        "to": "STEER-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "THRUSTER-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "CRANE-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "CRANE-02",
+        "resource": "electrical"
+      },
+      {
+        "to": "WINDLASS-01",
+        "resource": "electrical"
+      },
+      {
+        "to": "WINCH-MOOR-F",
+        "resource": "electrical"
+      },
+      {
+        "to": "WINCH-MOOR-A",
+        "resource": "electrical"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ECR-SWB-FRONT",
+    "hazards": [
+      "arc-flash"
+    ],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 1440,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: two-section 440V main distribution board on the ECR forward bulkhead. Single point of failure by design, to make the cascade visible."
+  },
+  {
+    "id": "PMP-SW-01",
+    "name": "Sea Water Cooling Pump No.1 (duty)",
+    "systemId": "SYS-COOL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -25,
+      "y": 1.0,
+      "z": 2.8
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.45,
+      "height": 1.1,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "HX-CENTRAL-01",
+        "resource": "seawater"
+      }
+    ],
+    "backedUpBy": [
+      "PMP-SW-02"
+    ],
+    "accessNodeId": "AN-ER-PUMP-BAY",
+    "hazards": [
+      "flooding"
+    ],
+    "repair": {
+      "meanRepairMinutes": 180,
+      "replaceMinutes": 420,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: duty centrifugal SW pump, bronze casing. PMP-SW-02 is a manual standby, so a failure here still propagates until the crew changes over."
+  },
+  {
+    "id": "PMP-SW-02",
+    "name": "Sea Water Cooling Pump No.2 (standby)",
+    "systemId": "SYS-COOL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -25,
+      "y": 1.0,
+      "z": -2.8
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.45,
+      "height": 1.1,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-PUMP-BAY",
+    "hazards": [
+      "flooding"
+    ],
+    "repair": {
+      "meanRepairMinutes": 180,
+      "replaceMinutes": 420,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": false,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: standby pump, isolated until started by hand. Deliberately not wired as a parallel supplier, to distinguish manual standby from automatic redundancy."
+  },
+  {
+    "id": "HX-CENTRAL-01",
+    "name": "Central Heat Exchanger (plate type)",
+    "systemId": "SYS-COOL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -21.5,
+      "y": 1.6,
+      "z": 2.4
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.8,
+        "y": 1.5,
+        "z": 0.9
+      }
+    },
+    "archetype": "plate-heat-exchanger",
+    "material": "titanium-gr1",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "PMP-FW-01",
+        "resource": "cooling"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-HX-FACE",
+    "hazards": [
+      "hot-surface",
+      "flooding"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 960,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: titanium plate heat exchanger between the sea water and fresh water circuits. No installed spare."
+  },
+  {
+    "id": "ME-MAIN-01",
+    "name": "Main Engine (medium speed diesel)",
+    "systemId": "SYS-PROP",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -17,
+      "y": 1.7,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 8.2,
+        "y": 3.0,
+        "z": 2.6
+      }
+    },
+    "archetype": "medium-speed-diesel",
+    "material": "cast-iron-gg25",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "SHAFT-01",
+        "resource": "mechanical"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-ME-PORT",
+    "hazards": [
+      "hot-surface",
+      "hot-work"
+    ],
+    "repair": {
+      "meanRepairMinutes": 720,
+      "replaceMinutes": 20160,
+      "crewRequired": 4,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: single main engine, direct drive. Needs both fuel and cooling, which is why it dies when either supply chain is lost. Not based on any real engine model."
+  },
+  {
+    "id": "SHAFT-01",
+    "name": "Propeller Shaft & Stern Tube",
+    "systemId": "SYS-PROP",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -29,
+      "y": 1.3,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.28,
+      "height": 16,
+      "axis": "x"
+    },
+    "archetype": "shaft-line",
+    "material": "stainless-316l",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "PROP-01",
+        "resource": "mechanical"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-SHAFT-TUNNEL",
+    "hazards": [
+      "flooding",
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 600,
+      "replaceMinutes": 28800,
+      "crewRequired": 4,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: shaft line running aft through the tunnel to the stern tube. Terminal node of the propulsion chain."
+  },
+  {
+    "id": "PMP-BILGE-01",
+    "name": "Bilge Main Pump",
+    "systemId": "SYS-BILGE",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -23,
+      "y": 0.7,
+      "z": -3.8
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.4,
+      "height": 0.9,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-BILGE-BAY",
+    "hazards": [
+      "flooding",
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 150,
+      "replaceMinutes": 360,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": false,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: bilge main suction pump. Loses power with the switchboard, which is what makes an electrical failure a flooding risk too."
+  },
+  {
+    "id": "PMP-BALLAST-01",
+    "name": "Ballast Main Pump",
+    "systemId": "SYS-BALL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -27.5,
+      "y": 0.8,
+      "z": -3.5
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.42,
+      "height": 1.0,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-ER-BALLAST-BAY",
+    "hazards": [
+      "flooding"
+    ],
+    "repair": {
+      "meanRepairMinutes": 165,
+      "replaceMinutes": 420,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": false,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: single ballast pump serving forepeak and double bottom tanks."
+  },
+  {
+    "id": "TANK-FO-S",
+    "name": "Fuel Oil Bunker Tank (Starboard)",
+    "systemId": "SYS-FUEL",
+    "compartmentId": "CMP-FUEL-S",
+    "position": {
+      "x": -22,
+      "y": 3.0,
+      "z": 5.2
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 14,
+        "y": 2.2,
+        "z": 1.4
+      }
+    },
+    "archetype": "tank",
+    "material": "steel-a36",
+    "criticality": 4,
+    "isSource": true,
+    "feeds": [
+      {
+        "to": "PUR-FO-01",
+        "resource": "fuel"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-TANK-FO-S",
+    "hazards": [
+      "fuel-spill",
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 480,
+      "replaceMinutes": 14400,
+      "crewRequired": 3,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: starboard wing bunker, mirror of the port tank. Either bunker alone can supply the separator."
+  },
+  {
+    "id": "PUR-FO-01",
+    "name": "Fuel Oil Separator",
+    "systemId": "SYS-AUX",
+    "compartmentId": "CMP-ER-PLAT",
+    "position": {
+      "x": -19,
+      "y": 4.4,
+      "z": -3.8
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.7,
+      "height": 2.2,
+      "axis": "y"
+    },
+    "archetype": "purifier",
+    "material": "stainless-316l",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "ME-MAIN-01",
+        "resource": "fuel"
+      },
+      {
+        "to": "DG-01",
+        "resource": "fuel"
+      },
+      {
+        "to": "DG-02",
+        "resource": "fuel"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PUR-FO-01",
+    "hazards": [
+      "fuel-spill",
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 1440,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: centrifugal separator conditioning bunker fuel for the engines. No installed standby, so it is the narrowest point of the fuel chain."
+  },
+  {
+    "id": "PMP-FO-01",
+    "name": "Fuel Transfer Pump",
+    "systemId": "SYS-FUEL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -21,
+      "y": 0.9,
+      "z": -4.2
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.35,
+      "height": 0.9,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PMP-FO-01",
+    "hazards": [
+      "fuel-spill"
+    ],
+    "repair": {
+      "meanRepairMinutes": 150,
+      "replaceMinutes": 360,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: transfers bunker fuel between wing tanks and the settling tank."
+  },
+  {
+    "id": "PMP-FW-01",
+    "name": "Fresh Water Circulating Pump",
+    "systemId": "SYS-COOL",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -23,
+      "y": 0.95,
+      "z": 1.8
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.42,
+      "height": 1.0,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "ME-MAIN-01",
+        "resource": "cooling"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PMP-FW-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 170,
+      "replaceMinutes": 420,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: circulates the fresh water side of the central cooling circuit through the engine jackets."
+  },
+  {
+    "id": "PMP-LO-01",
+    "name": "Lube Oil Pump",
+    "systemId": "SYS-AUX",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -19.5,
+      "y": 0.85,
+      "z": -2.2
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.36,
+      "height": 0.95,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "HX-LO-01",
+        "resource": "lubrication"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PMP-LO-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 160,
+      "replaceMinutes": 400,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: engine-driven backup exists on a real ship; here it is modelled as the sole lube oil supply."
+  },
+  {
+    "id": "HX-LO-01",
+    "name": "Lube Oil Cooler",
+    "systemId": "SYS-AUX",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -18,
+      "y": 1.5,
+      "z": -3.6
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.5,
+        "y": 1.2,
+        "z": 0.8
+      }
+    },
+    "archetype": "plate-heat-exchanger",
+    "material": "titanium-gr1",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "ME-MAIN-01",
+        "resource": "lubrication"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-HX-LO-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 720,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: plate cooler taking engine lube oil against the fresh water circuit."
+  },
+  {
+    "id": "PUR-LO-01",
+    "name": "Lube Oil Separator",
+    "systemId": "SYS-AUX",
+    "compartmentId": "CMP-ER-PLAT",
+    "position": {
+      "x": -19,
+      "y": 4.4,
+      "z": 3.8
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.62,
+      "height": 2.0,
+      "axis": "y"
+    },
+    "archetype": "purifier",
+    "material": "stainless-316l",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PUR-LO-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 280,
+      "replaceMinutes": 1200,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: cleans engine lube oil in a bypass loop; the engine runs without it for a while."
+  },
+  {
+    "id": "COMP-AIR-01",
+    "name": "Starting Air Compressor No.1",
+    "systemId": "SYS-AUX",
+    "compartmentId": "CMP-ER-PLAT",
+    "position": {
+      "x": -15,
+      "y": 4.35,
+      "z": -3.4
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 2.6,
+        "y": 2.0,
+        "z": 1.4
+      }
+    },
+    "archetype": "air-compressor",
+    "material": "cast-iron-gg25",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [
+      "COMP-AIR-02"
+    ],
+    "accessNodeId": "AN-COMP-AIR-01",
+    "hazards": [
+      "pressurised",
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 210,
+      "replaceMinutes": 900,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: charges the air receivers used to start the main engine and the generators."
+  },
+  {
+    "id": "COMP-AIR-02",
+    "name": "Starting Air Compressor No.2",
+    "systemId": "SYS-AUX",
+    "compartmentId": "CMP-ER-PLAT",
+    "position": {
+      "x": -15,
+      "y": 4.35,
+      "z": 3.4
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 2.6,
+        "y": 2.0,
+        "z": 1.4
+      }
+    },
+    "archetype": "air-compressor",
+    "material": "cast-iron-gg25",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-COMP-AIR-02",
+    "hazards": [
+      "pressurised",
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 210,
+      "replaceMinutes": 900,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: standby compressor, started by hand when No.1 is out."
+  },
+  {
+    "id": "SWB-EMG-01",
+    "name": "Emergency Switchboard 440V",
+    "systemId": "SYS-ELEC",
+    "compartmentId": "CMP-ECR",
+    "position": {
+      "x": -35.6,
+      "y": 4.4,
+      "z": -2.5
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.8,
+        "z": 0.5
+      }
+    },
+    "archetype": "switchboard",
+    "material": "steel-a36",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-SWB-EMG-01",
+    "hazards": [
+      "arc-flash"
+    ],
+    "repair": {
+      "meanRepairMinutes": 200,
+      "replaceMinutes": 1200,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: emergency board fed from its own source; drawn here as a separate cabinet beside the main board."
+  },
+  {
+    "id": "PMP-FIRE-01",
+    "name": "Fire & General Service Pump",
+    "systemId": "SYS-BILGE",
+    "compartmentId": "CMP-ER-LOWER",
+    "position": {
+      "x": -28,
+      "y": 0.9,
+      "z": 3.4
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.44,
+      "height": 1.05,
+      "axis": "y"
+    },
+    "archetype": "centrifugal-pump",
+    "material": "bronze-b62",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PMP-FIRE-01",
+    "hazards": [
+      "flooding"
+    ],
+    "repair": {
+      "meanRepairMinutes": 170,
+      "replaceMinutes": 420,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: supplies the fire main and doubles as general service. Loses power with the main board."
+  },
+  {
+    "id": "STEER-01",
+    "name": "Steering Gear",
+    "systemId": "SYS-STEER",
+    "compartmentId": "CMP-STEERING",
+    "position": {
+      "x": -40.5,
+      "y": 2.3,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 5.0,
+        "y": 3.0,
+        "z": 4.4
+      }
+    },
+    "archetype": "steering-gear",
+    "material": "steel-a36",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [
+      {
+        "to": "RUDDER-01",
+        "resource": "hydraulic"
+      }
+    ],
+    "backedUpBy": [],
+    "accessNodeId": "AN-STEER-01",
+    "hazards": [
+      "pressurised",
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 420,
+      "replaceMinutes": 4320,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: electro-hydraulic rams acting on the tiller. Two power packs, one board."
+  },
+  {
+    "id": "RUDDER-01",
+    "name": "Rudder",
+    "systemId": "SYS-STEER",
+    "compartmentId": "CMP-STEERING",
+    "position": {
+      "x": -43.6,
+      "y": 1.9,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 2.4,
+        "y": 3.8,
+        "z": 0.55
+      }
+    },
+    "archetype": "rudder",
+    "material": "steel-a36",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-RUDDER-01",
+    "hazards": [
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 720,
+      "replaceMinutes": 28800,
+      "crewRequired": 4,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: semi-balanced rudder on its stock. Terminal node of the steering chain."
+  },
+  {
+    "id": "PROP-01",
+    "name": "Propeller",
+    "systemId": "SYS-PROP",
+    "compartmentId": "CMP-STEERING",
+    "position": {
+      "x": -45.6,
+      "y": 1.3,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 1.7,
+      "height": 1.4,
+      "axis": "x"
+    },
+    "archetype": "propeller",
+    "material": "bronze-b62",
+    "criticality": 5,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-PROP-01",
+    "hazards": [
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 900,
+      "replaceMinutes": 20160,
+      "crewRequired": 4,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: four-bladed fixed pitch propeller. Terminal node of the propulsion chain."
+  },
+  {
+    "id": "THRUSTER-01",
+    "name": "Bow Thruster",
+    "systemId": "SYS-STEER",
+    "compartmentId": "CMP-FOREPEAK",
+    "position": {
+      "x": 35,
+      "y": 2.3,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 1.1,
+      "height": 5.0,
+      "axis": "z"
+    },
+    "archetype": "bow-thruster",
+    "material": "steel-a36",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-THRUSTER-01",
+    "hazards": [
+      "confined-space",
+      "flooding"
+    ],
+    "repair": {
+      "meanRepairMinutes": 360,
+      "replaceMinutes": 5760,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: tunnel thruster for harbour manoeuvring only."
+  },
+  {
+    "id": "HATCH-01",
+    "name": "Hatch Cover No.1",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": -1,
+      "y": 7.5,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 20,
+        "y": 2.0,
+        "z": 11
+      }
+    },
+    "archetype": "hatch-cover",
+    "material": "steel-a36",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-HATCH-01",
+    "hazards": [
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 5760,
+      "crewRequired": 3,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: folding hatch cover on its coaming over Cargo Hold No.1."
+  },
+  {
+    "id": "HATCH-02",
+    "name": "Hatch Cover No.2",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": 19,
+      "y": 7.5,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 16,
+        "y": 2.0,
+        "z": 9.5
+      }
+    },
+    "archetype": "hatch-cover",
+    "material": "steel-a36",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-HATCH-02",
+    "hazards": [
+      "confined-space"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 5040,
+      "crewRequired": 3,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: folding hatch cover over Cargo Hold No.2, narrower with the hull form."
+  },
+  {
+    "id": "CRANE-01",
+    "name": "Deck Crane No.1",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": 9,
+      "y": 10.0,
+      "z": 5.0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 16,
+        "y": 7.0,
+        "z": 3.4
+      }
+    },
+    "archetype": "deck-crane",
+    "material": "steel-a36",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-CRANE-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 480,
+      "replaceMinutes": 10080,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: pedestal crane with a luffing jib, serving both holds from the starboard side."
+  },
+  {
+    "id": "CRANE-02",
+    "name": "Deck Crane No.2",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-FOREDECK",
+    "position": {
+      "x": 26,
+      "y": 10.0,
+      "z": 5.0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 16,
+        "y": 7.0,
+        "z": 3.4
+      }
+    },
+    "archetype": "deck-crane",
+    "material": "steel-a36",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-CRANE-02",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 480,
+      "replaceMinutes": 10080,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: forward crane, identical to No.1."
+  },
+  {
+    "id": "WINDLASS-01",
+    "name": "Anchor Windlass",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-FOREDECK",
+    "position": {
+      "x": 38,
+      "y": 7.6,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 3.4,
+        "y": 1.9,
+        "z": 4.4
+      }
+    },
+    "archetype": "windlass",
+    "material": "cast-iron-gg25",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-WINDLASS-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 4320,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: twin-gypsy windlass handling both bower anchors."
+  },
+  {
+    "id": "WINCH-MOOR-F",
+    "name": "Mooring Winch (Forward)",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-FOREDECK",
+    "position": {
+      "x": 31,
+      "y": 7.5,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 3.0,
+        "y": 1.7,
+        "z": 3.6
+      }
+    },
+    "archetype": "mooring-winch",
+    "material": "cast-iron-gg25",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-WINCH-MOOR-F",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 2880,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: split-drum mooring winch on the forecastle."
+  },
+  {
+    "id": "WINCH-MOOR-A",
+    "name": "Mooring Winch (Aft)",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-AFTDECK",
+    "position": {
+      "x": -41,
+      "y": 7.5,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 3.0,
+        "y": 1.7,
+        "z": 3.6
+      }
+    },
+    "archetype": "mooring-winch",
+    "material": "cast-iron-gg25",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-WINCH-MOOR-A",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 2880,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: aft mooring winch on the poop."
+  },
+  {
+    "id": "MAST-FWD",
+    "name": "Foremast",
+    "systemId": "SYS-NAV",
+    "compartmentId": "CMP-FOREDECK",
+    "position": {
+      "x": 42,
+      "y": 10.0,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.3,
+      "height": 7.0,
+      "axis": "y"
+    },
+    "archetype": "mast",
+    "material": "aluminium-5083",
+    "criticality": 2,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-MAST-FWD",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 180,
+      "replaceMinutes": 1440,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: forward mast carrying the steaming light."
+  },
+  {
+    "id": "MAST-MAIN",
+    "name": "Main Mast & Radar",
+    "systemId": "SYS-NAV",
+    "compartmentId": "CMP-FUNNEL",
+    "position": {
+      "x": -22,
+      "y": 17.5,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "cylinder",
+      "radius": 0.34,
+      "height": 7.5,
+      "axis": "y"
+    },
+    "archetype": "mast",
+    "material": "aluminium-5083",
+    "criticality": 3,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-MAST-MAIN",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 2880,
+      "crewRequired": 2,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: main mast with radar scanner, signal yard and navigation lights."
+  },
+  {
+    "id": "FUNNEL-01",
+    "name": "Funnel",
+    "systemId": "SYS-PROP",
+    "compartmentId": "CMP-FUNNEL",
+    "position": {
+      "x": -29,
+      "y": 16.0,
+      "z": 0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 4.0,
+        "y": 5.2,
+        "z": 4.4
+      }
+    },
+    "archetype": "funnel",
+    "material": "steel-a36",
+    "criticality": 2,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-FUNNEL-01",
+    "hazards": [
+      "hot-surface"
+    ],
+    "repair": {
+      "meanRepairMinutes": 300,
+      "replaceMinutes": 5760,
+      "crewRequired": 3,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: funnel casing carrying the main engine and generator uptakes."
+  },
+  {
+    "id": "LIFEBOAT-P",
+    "name": "Survival Craft (Port)",
+    "systemId": "SYS-NAV",
+    "compartmentId": "CMP-AFTDECK",
+    "position": {
+      "x": -30,
+      "y": 9.0,
+      "z": -6.0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 7.0,
+        "y": 3.4,
+        "z": 2.8
+      }
+    },
+    "archetype": "lifeboat",
+    "material": "grp-composite",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-LIFEBOAT-P",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 2880,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: enclosed survival craft in gravity davits, port side."
+  },
+  {
+    "id": "LIFEBOAT-S",
+    "name": "Survival Craft (Starboard)",
+    "systemId": "SYS-NAV",
+    "compartmentId": "CMP-AFTDECK",
+    "position": {
+      "x": -30,
+      "y": 9.0,
+      "z": 6.0
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 7.0,
+        "y": 3.4,
+        "z": 2.8
+      }
+    },
+    "archetype": "lifeboat",
+    "material": "grp-composite",
+    "criticality": 4,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-LIFEBOAT-S",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 240,
+      "replaceMinutes": 2880,
+      "crewRequired": 3,
+      "requiresHotWork": false,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": false
+    },
+    "note": "Modeled: enclosed survival craft in gravity davits, starboard side."
+  },
+  {
+    "id": "BOLLARD-F1",
+    "name": "Mooring Bollard 1",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-FOREDECK",
+    "position": {
+      "x": 35.4,
+      "y": 7.1,
+      "z": -2.95
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-F1",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the port side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-F2",
+    "name": "Mooring Bollard 2",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-FOREDECK",
+    "position": {
+      "x": 35.4,
+      "y": 7.1,
+      "z": 2.95
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-F2",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the starboard side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-M1",
+    "name": "Mooring Bollard 3",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": 14,
+      "y": 7.1,
+      "z": -6.2
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-M1",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the port side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-M2",
+    "name": "Mooring Bollard 4",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": 14,
+      "y": 7.1,
+      "z": 6.2
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-M2",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the starboard side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-M3",
+    "name": "Mooring Bollard 5",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": -6,
+      "y": 7.1,
+      "z": -6.2
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-M3",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the port side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-M4",
+    "name": "Mooring Bollard 6",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-CARGODECK",
+    "position": {
+      "x": -6,
+      "y": 7.1,
+      "z": 6.2
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-M4",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the starboard side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-A1",
+    "name": "Mooring Bollard 7",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-AFTDECK",
+    "position": {
+      "x": -43,
+      "y": 7.1,
+      "z": -2.9
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-A1",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the port side, used for mooring lines."
+  },
+  {
+    "id": "BOLLARD-A2",
+    "name": "Mooring Bollard 8",
+    "systemId": "SYS-DECK",
+    "compartmentId": "CMP-AFTDECK",
+    "position": {
+      "x": -43,
+      "y": 7.1,
+      "z": 2.9
+    },
+    "geometry": {
+      "kind": "box",
+      "size": {
+        "x": 1.6,
+        "y": 1.2,
+        "z": 0.9
+      }
+    },
+    "archetype": "bollard",
+    "material": "cast-iron-gg25",
+    "criticality": 1,
+    "isSource": false,
+    "feeds": [],
+    "backedUpBy": [],
+    "accessNodeId": "AN-BOLLARD-A2",
+    "hazards": [],
+    "repair": {
+      "meanRepairMinutes": 120,
+      "replaceMinutes": 480,
+      "crewRequired": 2,
+      "requiresHotWork": true,
+      "requiresSystemShutdown": true,
+      "sparePartOnboard": true
+    },
+    "note": "Modeled: double bitt on the starboard side, used for mooring lines."
+  }
+]

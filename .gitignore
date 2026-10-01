@@ -1,0 +1,34 @@
+# dependencies
+node_modules
+
+# Next.js / build output
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+
+# environment and secrets
+.env
+.env*
+!.env.example
+*.pem
+
+# deploy
+.vercel
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+
+# tests
+coverage
+
+# Screenshots shared during development
+Claude outputs/

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "SYS-PROP",
+    "name": "Propulsion",
+    "kind": "propulsion",
+    "criticality": 5,
+    "hudColor": "#FF6FA5",
+    "note": "Modeled: single medium-speed diesel, direct drive to a fixed pitch propeller."
+  },
+  {
+    "id": "SYS-ELEC",
+    "name": "Electrical Power",
+    "kind": "electrical",
+    "criticality": 5,
+    "hudColor": "#C6F24E",
+    "note": "Modeled: two diesel generators feeding a 440V main switchboard."
+  },
+  {
+    "id": "SYS-COOL",
+    "name": "Cooling (SW/FW)",
+    "kind": "cooling",
+    "criticality": 4,
+    "hudColor": "#38D6F2",
+    "note": "Modeled: central cooling, sea water side through a plate heat exchanger."
+  },
+  {
+    "id": "SYS-FUEL",
+    "name": "Fuel Oil",
+    "kind": "fuel",
+    "criticality": 4,
+    "hudColor": "#FFB03A",
+    "note": "Modeled: wing bunker tanks, transfer and supply to engine and generators."
+  },
+  {
+    "id": "SYS-BALL",
+    "name": "Ballast",
+    "kind": "ballast",
+    "criticality": 3,
+    "hudColor": "#5B8CFF",
+    "note": "Modeled: forepeak and double bottom ballast with a single main pump."
+  },
+  {
+    "id": "SYS-BILGE",
+    "name": "Bilge & Drainage",
+    "kind": "bilge",
+    "criticality": 3,
+    "hudColor": "#A98BFF",
+    "note": "Modeled: bilge main with suctions in machinery and cargo spaces."
+  },
+  {
+    "id": "SYS-DECK",
+    "name": "Deck & Cargo Handling",
+    "kind": "deck",
+    "criticality": 3,
+    "hudColor": "#4ED9A4",
+    "note": "Modeled: crane, hatch covers, windlass and mooring winches, all electrically driven."
+  },
+  {
+    "id": "SYS-STEER",
+    "name": "Steering & Manoeuvring",
+    "kind": "steering",
+    "criticality": 5,
+    "hudColor": "#FF9E6B",
+    "note": "Modeled: electro-hydraulic steering gear, rudder and bow thruster."
+  },
+  {
+    "id": "SYS-AUX",
+    "name": "Auxiliary Services",
+    "kind": "auxiliary",
+    "criticality": 4,
+    "hudColor": "#D7D06A",
+    "note": "Modeled: starting air, lube oil and separators supporting the main machinery."
+  },
+  {
+    "id": "SYS-NAV",
+    "name": "Navigation & Safety",
+    "kind": "navigation",
+    "criticality": 3,
+    "hudColor": "#B9C4D0",
+    "note": "Modeled: masts, radar, navigation lights and survival craft."
+  }
+]

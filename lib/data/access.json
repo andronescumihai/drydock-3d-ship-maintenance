@@ -1,0 +1,1736 @@
+{
+  "entryNodeId": "AN-ENTRY",
+  "walkingSpeed": 0.8,
+  "note": "Modeled access network for the sample vessel. Node minutes are the time to pass, open or dismantle that obstacle; edges without minutes are walked at walkingSpeed m/s. Plausible estimates, not survey data.",
+  "nodes": [
+    {
+      "id": "AN-ENTRY",
+      "name": "Gangway, starboard amidships",
+      "kind": "entry",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": -8,
+        "y": 6.5,
+        "z": 6.4
+      },
+      "minutes": 0,
+      "action": "Board at the gangway and sign in with the duty officer"
+    },
+    {
+      "id": "MD-S-HOUSE",
+      "name": "Starboard walkway, abreast deckhouse",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -20,
+        "y": 6.5,
+        "z": 6.2
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-S-AFT",
+      "name": "Starboard walkway, aft",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -40,
+        "y": 6.5,
+        "z": 5.6
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-AFT-CL",
+      "name": "Aft mooring deck, centreline",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -42,
+        "y": 6.5,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-P-AFT",
+      "name": "Port walkway, aft",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -40,
+        "y": 6.5,
+        "z": -5.6
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-P-HOUSE",
+      "name": "Port walkway, abreast deckhouse",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -20,
+        "y": 6.5,
+        "z": -6.2
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-S-MID",
+      "name": "Starboard walkway, No.1 hatch",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": 6,
+        "y": 6.5,
+        "z": 6.4
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-P-MID",
+      "name": "Port walkway, No.1 hatch",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": 6,
+        "y": 6.5,
+        "z": -6.4
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-S-FWD",
+      "name": "Starboard walkway, forward",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 24,
+        "y": 6.5,
+        "z": 5.6
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-P-FWD",
+      "name": "Port walkway, forward",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 24,
+        "y": 6.5,
+        "z": -5.6
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "MD-FOC",
+      "name": "Forecastle deck, centreline",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 36,
+        "y": 6.5,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "DOOR-ACC-S",
+      "name": "Accommodation door, starboard",
+      "kind": "door",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -21.5,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "minutes": 0.5,
+      "action": "Open the weathertight accommodation door"
+    },
+    {
+      "id": "ACC-LOBBY",
+      "name": "Accommodation lobby",
+      "kind": "walkway",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -24,
+        "y": 6.5,
+        "z": 2
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "STAIR-ACC",
+      "name": "Accommodation stairway",
+      "kind": "stair",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -26,
+        "y": 6.5,
+        "z": 2
+      },
+      "minutes": 1.5,
+      "action": "Climb the internal stairway to the bridge deck"
+    },
+    {
+      "id": "BR-LANDING",
+      "name": "Bridge deck landing",
+      "kind": "walkway",
+      "deckId": "DECK-BRIDGE",
+      "compartmentId": "CMP-BRIDGE",
+      "position": {
+        "x": -26,
+        "y": 11.4,
+        "z": 2
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "LADDER-FUNNEL",
+      "name": "Ladder to funnel deck",
+      "kind": "ladder",
+      "deckId": "DECK-BRIDGE",
+      "compartmentId": "CMP-BRIDGE",
+      "position": {
+        "x": -30,
+        "y": 11.4,
+        "z": 3
+      },
+      "minutes": 1.5,
+      "action": "Climb the vertical ladder to the funnel deck"
+    },
+    {
+      "id": "FUNNEL-DECK",
+      "name": "Funnel deck",
+      "kind": "walkway",
+      "deckId": "DECK-BRIDGE",
+      "compartmentId": "CMP-FUNNEL",
+      "position": {
+        "x": -30,
+        "y": 13.2,
+        "z": 3
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "AN-FUNNEL-01",
+      "name": "Funnel casing access door",
+      "kind": "workface",
+      "deckId": "DECK-BRIDGE",
+      "compartmentId": "CMP-FUNNEL",
+      "position": {
+        "x": -29,
+        "y": 13.2,
+        "z": 2.2
+      },
+      "minutes": 10,
+      "action": "Open the funnel casing door; exhaust uptakes must be cold (hot surfaces)",
+      "reinstall": true
+    },
+    {
+      "id": "AN-MAST-MAIN",
+      "name": "Main mast ladder",
+      "kind": "workface",
+      "deckId": "DECK-BRIDGE",
+      "compartmentId": "CMP-FUNNEL",
+      "position": {
+        "x": -22,
+        "y": 13.2,
+        "z": 1.2
+      },
+      "minutes": 8,
+      "action": "Isolate radar and antennas, climb the mast with fall-arrest harness"
+    },
+    {
+      "id": "DOOR-ER-CASING",
+      "name": "Engine casing door",
+      "kind": "door",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -24,
+        "y": 6.5,
+        "z": 0
+      },
+      "minutes": 1,
+      "action": "Undog the engine casing door"
+    },
+    {
+      "id": "LADDER-ER-TOP",
+      "name": "Engine room ladder, main deck to platform",
+      "kind": "ladder",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -24,
+        "y": 6.5,
+        "z": -0.8
+      },
+      "minutes": 1.5,
+      "action": "Descend the engine room ladder to the platform"
+    },
+    {
+      "id": "ER-PLAT-TOP",
+      "name": "Platform, foot of casing ladder",
+      "kind": "walkway",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -24,
+        "y": 3.2,
+        "z": -0.8
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "ER-PLAT-HUB",
+      "name": "Engine room platform, centre",
+      "kind": "walkway",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -22,
+        "y": 3.2,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "ER-PLAT-FWD",
+      "name": "Engine room platform, forward",
+      "kind": "walkway",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -15,
+        "y": 3.2,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "DOOR-ECR",
+      "name": "Engine control room door",
+      "kind": "door",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ECR",
+      "position": {
+        "x": -30.2,
+        "y": 3.2,
+        "z": -1
+      },
+      "minutes": 0.3,
+      "action": "Enter the engine control room"
+    },
+    {
+      "id": "AN-ECR-SWB-FRONT",
+      "name": "Main switchboard, front",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ECR",
+      "position": {
+        "x": -33.5,
+        "y": 3.2,
+        "z": -1.2
+      },
+      "minutes": 30,
+      "action": "Arc-flash PPE, rack out and lock-out the incomer breakers, remove front covers",
+      "reinstall": true
+    },
+    {
+      "id": "AN-SWB-EMG-01",
+      "name": "Emergency switchboard, front",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ECR",
+      "position": {
+        "x": -35.6,
+        "y": 3.2,
+        "z": -1.2
+      },
+      "minutes": 25,
+      "action": "Transfer loads, lock-out, remove front covers (arc-flash PPE)",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-PLAT-DG1",
+      "name": "Generator No.1, service side",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -26,
+        "y": 3.2,
+        "z": -1.2
+      },
+      "minutes": 30,
+      "action": "Stop and block start air, let cool, remove heat shields and inspection covers",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-PLAT-DG2",
+      "name": "Generator No.2, service side",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -26,
+        "y": 3.2,
+        "z": 1.3
+      },
+      "minutes": 30,
+      "action": "Stop and block start air, let cool, remove heat shields and inspection covers",
+      "reinstall": true
+    },
+    {
+      "id": "DOOR-PUR",
+      "name": "Purifier room door",
+      "kind": "door",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -20.5,
+        "y": 3.2,
+        "z": 0
+      },
+      "minutes": 0.3,
+      "action": "Enter the purifier room"
+    },
+    {
+      "id": "PUR-ROOM",
+      "name": "Purifier room",
+      "kind": "walkway",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -19,
+        "y": 3.2,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "AN-PUR-FO-01",
+      "name": "Fuel oil separator",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -19,
+        "y": 3.2,
+        "z": -2.3
+      },
+      "minutes": 30,
+      "action": "Stop the separator, drain the bowl, lift the bowl hood with the chain block",
+      "reinstall": true
+    },
+    {
+      "id": "AN-PUR-LO-01",
+      "name": "Lube oil separator",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -19,
+        "y": 3.2,
+        "z": 2.3
+      },
+      "minutes": 30,
+      "action": "Stop the separator, drain the bowl, lift the bowl hood with the chain block",
+      "reinstall": true
+    },
+    {
+      "id": "AN-COMP-AIR-01",
+      "name": "Air compressor No.1",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -15,
+        "y": 3.2,
+        "z": -1.8
+      },
+      "minutes": 12,
+      "action": "Vent to atmosphere, lock-out motor, remove belt guard",
+      "reinstall": true
+    },
+    {
+      "id": "AN-COMP-AIR-02",
+      "name": "Air compressor No.2",
+      "kind": "workface",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -15,
+        "y": 3.2,
+        "z": 1.8
+      },
+      "minutes": 12,
+      "action": "Vent to atmosphere, lock-out motor, remove belt guard",
+      "reinstall": true
+    },
+    {
+      "id": "LADDER-ER-LOWER",
+      "name": "Platform ladder to tank top",
+      "kind": "ladder",
+      "deckId": "DECK-ER-PLAT",
+      "compartmentId": "CMP-ER-PLAT",
+      "position": {
+        "x": -23.5,
+        "y": 3.2,
+        "z": 1.0
+      },
+      "minutes": 1,
+      "action": "Descend the platform ladder to the tank top"
+    },
+    {
+      "id": "ER-LOWER-HUB",
+      "name": "Tank top, foot of ladder",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -23.5,
+        "y": 0,
+        "z": 1.0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "ER-LOWER-AFT",
+      "name": "Tank top, aft end",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -28.5,
+        "y": 0,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "ER-LOWER-FWD",
+      "name": "Tank top, forward end",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -17.5,
+        "y": 0,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "ER-LOWER-PORT",
+      "name": "Tank top, port wing",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -22,
+        "y": 0,
+        "z": -3.8
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "ER-LOWER-STBD",
+      "name": "Tank top, starboard wing",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -22,
+        "y": 0,
+        "z": 3.8
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "FP-PUMPBAY",
+      "name": "Floor plates over sea-water pump bay",
+      "kind": "removal",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -25,
+        "y": 0,
+        "z": 1.2
+      },
+      "minutes": 12,
+      "action": "Unbolt and lift the floor plates over the pump bay",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-PUMP-BAY",
+      "name": "Sea-water pump bay",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -25,
+        "y": 0,
+        "z": 1.8
+      },
+      "minutes": 15,
+      "action": "Isolate suction and discharge valves, lock-out motor, drain the casing",
+      "reinstall": true
+    },
+    {
+      "id": "FP-SEACHEST",
+      "name": "Floor plates over sea chest",
+      "kind": "removal",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -27,
+        "y": 0,
+        "z": 1.6
+      },
+      "minutes": 15,
+      "action": "Unbolt and lift the floor plates over the sea chest",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-SEACHEST",
+      "name": "Sea chest strainer",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -27,
+        "y": 0,
+        "z": 2.6
+      },
+      "minutes": 20,
+      "action": "Close the ship-side valve, confirm tight, open the strainer cover (flooding risk)",
+      "reinstall": true
+    },
+    {
+      "id": "SPOOL-FW",
+      "name": "Fresh-water pump discharge spool",
+      "kind": "removal",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -22.5,
+        "y": 0,
+        "z": 1.2
+      },
+      "minutes": 25,
+      "action": "Drain and remove the FW pump discharge spool piece that blocks the cooler end cover",
+      "reinstall": true,
+      "componentId": "PMP-FW-01"
+    },
+    {
+      "id": "AN-ER-HX-FACE",
+      "name": "Central cooler end cover",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -21.5,
+        "y": 0,
+        "z": 1.8
+      },
+      "minutes": 35,
+      "action": "Isolate both circuits, drain, unbolt and swing the end cover",
+      "reinstall": true
+    },
+    {
+      "id": "AN-PMP-FW-01",
+      "name": "Fresh-water pump",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -23,
+        "y": 0,
+        "z": 1.4
+      },
+      "minutes": 10,
+      "action": "Isolate valves, lock-out motor, drain the casing",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-ME-PORT",
+      "name": "Main engine, port side",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -17,
+        "y": 0,
+        "z": -2.3
+      },
+      "minutes": 45,
+      "action": "Engage turning gear, allow crankcase to cool, open crankcase doors",
+      "reinstall": true
+    },
+    {
+      "id": "AN-PMP-LO-01",
+      "name": "Lube oil pump",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -19.5,
+        "y": 0,
+        "z": -1.2
+      },
+      "minutes": 10,
+      "action": "Isolate, lock-out motor, drain to sump tank",
+      "reinstall": true
+    },
+    {
+      "id": "GUARD-LO",
+      "name": "Lube oil pump strainer and guard",
+      "kind": "removal",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -19,
+        "y": 0,
+        "z": -2.0
+      },
+      "minutes": 10,
+      "action": "Remove the lube oil strainer guard in front of the cooler",
+      "reinstall": true,
+      "componentId": "PMP-LO-01"
+    },
+    {
+      "id": "AN-HX-LO-01",
+      "name": "Lube oil cooler",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -18,
+        "y": 0,
+        "z": -2.6
+      },
+      "minutes": 20,
+      "action": "Isolate oil and water sides, drain, open the cooler",
+      "reinstall": true
+    },
+    {
+      "id": "FP-PORT",
+      "name": "Floor plates, port wing",
+      "kind": "removal",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -22,
+        "y": 0,
+        "z": -2.6
+      },
+      "minutes": 12,
+      "action": "Unbolt and lift the port wing floor plates",
+      "reinstall": true
+    },
+    {
+      "id": "AN-PMP-FO-01",
+      "name": "Fuel oil transfer pump",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -21,
+        "y": 0,
+        "z": -3.1
+      },
+      "minutes": 12,
+      "action": "Close tank valves, drain the line into a drip tray",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-BILGE-BAY",
+      "name": "Bilge pump bay",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -23,
+        "y": 0,
+        "z": -2.8
+      },
+      "minutes": 10,
+      "action": "Pump down the well, isolate, lock-out motor",
+      "reinstall": true
+    },
+    {
+      "id": "FP-AFT-PORT",
+      "name": "Floor plates, aft port",
+      "kind": "removal",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -27.5,
+        "y": 0,
+        "z": -1.4
+      },
+      "minutes": 12,
+      "action": "Unbolt and lift the aft port floor plates",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-BALLAST-BAY",
+      "name": "Ballast pump bay",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -27.5,
+        "y": 0,
+        "z": -2.3
+      },
+      "minutes": 10,
+      "action": "Close ballast manifold valves, lock-out motor",
+      "reinstall": true
+    },
+    {
+      "id": "AN-PMP-FIRE-01",
+      "name": "Fire pump",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -28,
+        "y": 0,
+        "z": 2.3
+      },
+      "minutes": 8,
+      "action": "Notify the bridge (fire main out of service), isolate, lock-out",
+      "reinstall": true
+    },
+    {
+      "id": "AN-ER-SHAFT-TUNNEL",
+      "name": "Intermediate shaft and coupling",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-ER-LOWER",
+      "position": {
+        "x": -29.8,
+        "y": 0,
+        "z": -0.8
+      },
+      "minutes": 25,
+      "action": "Engage turning gear lock, remove the coupling guard",
+      "reinstall": true
+    },
+    {
+      "id": "AN-FUEL-P-MANHOLE",
+      "name": "Port fuel tank manhole",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-FUEL-P",
+      "position": {
+        "x": -22,
+        "y": 0.3,
+        "z": -5.2
+      },
+      "minutes": 240,
+      "action": "Empty and gas-free the tank, ventilate, test atmosphere, open the manhole (confined-space permit)",
+      "reinstall": true
+    },
+    {
+      "id": "AN-TANK-FO-S",
+      "name": "Starboard fuel tank manhole",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-FUEL-S",
+      "position": {
+        "x": -22,
+        "y": 1.9,
+        "z": 4.3
+      },
+      "minutes": 240,
+      "action": "Empty and gas-free the tank, ventilate, test atmosphere, open the manhole (confined-space permit)",
+      "reinstall": true
+    },
+    {
+      "id": "DOOR-AUX",
+      "name": "Watertight door to auxiliary space",
+      "kind": "door",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-AUX",
+      "position": {
+        "x": -30.4,
+        "y": 0,
+        "z": 1.5
+      },
+      "minutes": 2,
+      "action": "Operate the hydraulic watertight door (bridge notified)"
+    },
+    {
+      "id": "AUX-SPACE",
+      "name": "Auxiliary machinery space",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-AUX",
+      "position": {
+        "x": -33.5,
+        "y": 0,
+        "z": 1.5
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "DOOR-STEER",
+      "name": "Watertight door to steering gear room",
+      "kind": "door",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-STEERING",
+      "position": {
+        "x": -37.2,
+        "y": 0,
+        "z": 1.5
+      },
+      "minutes": 2,
+      "action": "Operate the watertight door to the steering flat"
+    },
+    {
+      "id": "HATCH-STEER",
+      "name": "Steering flat deck hatch",
+      "kind": "hatch",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -42,
+        "y": 6.5,
+        "z": 1.5
+      },
+      "minutes": 4,
+      "action": "Undog and raise the steering flat access hatch",
+      "reinstall": true
+    },
+    {
+      "id": "LADDER-STEER",
+      "name": "Steering flat ladder",
+      "kind": "ladder",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -42.3,
+        "y": 6.5,
+        "z": 1.9
+      },
+      "minutes": 2,
+      "action": "Descend the vertical ladder into the steering flat"
+    },
+    {
+      "id": "STEER-ROOM",
+      "name": "Steering gear room",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-STEERING",
+      "position": {
+        "x": -40,
+        "y": 0.5,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "AN-STEER-01",
+      "name": "Steering gear, service side",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-STEERING",
+      "position": {
+        "x": -40.5,
+        "y": 0.5,
+        "z": 1.9
+      },
+      "minutes": 25,
+      "action": "Change over to the standby pump unit, depressurise, isolate",
+      "reinstall": true
+    },
+    {
+      "id": "AN-RUDDER-01",
+      "name": "Rudder carrier",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-STEERING",
+      "position": {
+        "x": -43.6,
+        "y": 0.5,
+        "z": 1.3
+      },
+      "minutes": 60,
+      "action": "Support the rudder stock, remove the carrier bearing cover",
+      "reinstall": true
+    },
+    {
+      "id": "AN-PROP-01",
+      "name": "Propeller (outboard)",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-STEERING",
+      "position": {
+        "x": -45.6,
+        "y": 0.5,
+        "z": 0
+      },
+      "minutes": 480,
+      "action": "The propeller is outboard: diver inspection alongside, or dry-docking for removal"
+    },
+    {
+      "id": "HATCH-FOREPEAK",
+      "name": "Forepeak access hatch",
+      "kind": "hatch",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 36,
+        "y": 6.5,
+        "z": 1.2
+      },
+      "minutes": 4,
+      "action": "Undog and raise the forepeak hatch",
+      "reinstall": true
+    },
+    {
+      "id": "LADDER-FOREPEAK",
+      "name": "Forepeak ladder",
+      "kind": "ladder",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 36,
+        "y": 6.5,
+        "z": 1.6
+      },
+      "minutes": 3,
+      "action": "Descend the forepeak ladder (confined space: gas test first)"
+    },
+    {
+      "id": "FOREPEAK-FLAT",
+      "name": "Bow thruster room",
+      "kind": "walkway",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-FOREPEAK",
+      "position": {
+        "x": 35,
+        "y": 1.0,
+        "z": 0
+      },
+      "minutes": 0,
+      "action": ""
+    },
+    {
+      "id": "AN-THRUSTER-01",
+      "name": "Bow thruster, inspection cover",
+      "kind": "workface",
+      "deckId": "DECK-TANKTOP",
+      "compartmentId": "CMP-FOREPEAK",
+      "position": {
+        "x": 35,
+        "y": 1.0,
+        "z": 1.8
+      },
+      "minutes": 40,
+      "action": "Isolate the thruster, drain the header tank, open the inspection cover (flooding risk)",
+      "reinstall": true
+    },
+    {
+      "id": "AN-HATCH-01",
+      "name": "No.1 hatch cover",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": -1,
+        "y": 6.5,
+        "z": 6.0
+      },
+      "minutes": 15,
+      "action": "Lower the cover onto its maintenance stops and secure",
+      "reinstall": true
+    },
+    {
+      "id": "AN-HATCH-02",
+      "name": "No.2 hatch cover",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": 19,
+        "y": 6.5,
+        "z": 6.0
+      },
+      "minutes": 15,
+      "action": "Lower the cover onto its maintenance stops and secure",
+      "reinstall": true
+    },
+    {
+      "id": "AN-CRANE-01",
+      "name": "Crane No.1 pedestal",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": 9,
+        "y": 6.5,
+        "z": 3.2
+      },
+      "minutes": 12,
+      "action": "Stow and lock the jib, climb the pedestal ladder, open the machinery house",
+      "reinstall": true
+    },
+    {
+      "id": "AN-CRANE-02",
+      "name": "Crane No.2 pedestal",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 26,
+        "y": 6.5,
+        "z": 3.2
+      },
+      "minutes": 12,
+      "action": "Stow and lock the jib, climb the pedestal ladder, open the machinery house",
+      "reinstall": true
+    },
+    {
+      "id": "AN-WINDLASS-01",
+      "name": "Windlass",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 38,
+        "y": 6.5,
+        "z": 1.8
+      },
+      "minutes": 10,
+      "action": "Apply the band brakes and chain stoppers, lock-out, remove the gear guard",
+      "reinstall": true
+    },
+    {
+      "id": "AN-WINCH-MOOR-F",
+      "name": "Forward mooring winch",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 31,
+        "y": 6.5,
+        "z": 1.8
+      },
+      "minutes": 8,
+      "action": "Slack and secure the lines, lock-out, remove the gear guard",
+      "reinstall": true
+    },
+    {
+      "id": "AN-WINCH-MOOR-A",
+      "name": "Aft mooring winch",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -41,
+        "y": 6.5,
+        "z": -1.8
+      },
+      "minutes": 8,
+      "action": "Slack and secure the lines, lock-out, remove the gear guard",
+      "reinstall": true
+    },
+    {
+      "id": "AN-MAST-FWD",
+      "name": "Foremast ladder",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 42,
+        "y": 6.5,
+        "z": 0.8
+      },
+      "minutes": 8,
+      "action": "Isolate the navigation lights, climb with fall-arrest harness"
+    },
+    {
+      "id": "AN-LIFEBOAT-P",
+      "name": "Port lifeboat, cradle",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -30,
+        "y": 6.5,
+        "z": -5.4
+      },
+      "minutes": 10,
+      "action": "Secure the boat in its cradle with maintenance pendants",
+      "reinstall": true
+    },
+    {
+      "id": "AN-LIFEBOAT-S",
+      "name": "Starboard lifeboat, cradle",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -30,
+        "y": 6.5,
+        "z": 5.4
+      },
+      "minutes": 10,
+      "action": "Secure the boat in its cradle with maintenance pendants",
+      "reinstall": true
+    },
+    {
+      "id": "AN-BOLLARD-F1",
+      "name": "Bollard F1",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 35.4,
+        "y": 6.5,
+        "z": -2.1
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-F2",
+      "name": "Bollard F2",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-FOREDECK",
+      "position": {
+        "x": 35.4,
+        "y": 6.5,
+        "z": 2.1
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-M1",
+      "name": "Bollard M1",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": 14,
+        "y": 6.5,
+        "z": -5.6
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-M2",
+      "name": "Bollard M2",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": 14,
+        "y": 6.5,
+        "z": 5.6
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-M3",
+      "name": "Bollard M3",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": -6,
+        "y": 6.5,
+        "z": -5.6
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-M4",
+      "name": "Bollard M4",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-CARGODECK",
+      "position": {
+        "x": -6,
+        "y": 6.5,
+        "z": 5.6
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-A1",
+      "name": "Bollard A1",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -43,
+        "y": 6.5,
+        "z": -2.1
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    },
+    {
+      "id": "AN-BOLLARD-A2",
+      "name": "Bollard A2",
+      "kind": "workface",
+      "deckId": "DECK-MAIN",
+      "compartmentId": "CMP-AFTDECK",
+      "position": {
+        "x": -43,
+        "y": 6.5,
+        "z": 2.1
+      },
+      "minutes": 5,
+      "action": "Clear the lines and mark off the working area"
+    }
+  ],
+  "edges": [
+    {
+      "from": "AN-ENTRY",
+      "to": "MD-S-MID"
+    },
+    {
+      "from": "AN-ENTRY",
+      "to": "MD-S-HOUSE"
+    },
+    {
+      "from": "MD-S-HOUSE",
+      "to": "MD-S-AFT"
+    },
+    {
+      "from": "MD-S-AFT",
+      "to": "MD-AFT-CL"
+    },
+    {
+      "from": "MD-AFT-CL",
+      "to": "MD-P-AFT"
+    },
+    {
+      "from": "MD-P-AFT",
+      "to": "MD-P-HOUSE"
+    },
+    {
+      "from": "MD-P-HOUSE",
+      "to": "MD-P-MID"
+    },
+    {
+      "from": "MD-P-MID",
+      "to": "MD-P-FWD"
+    },
+    {
+      "from": "MD-P-FWD",
+      "to": "MD-FOC"
+    },
+    {
+      "from": "MD-FOC",
+      "to": "MD-S-FWD"
+    },
+    {
+      "from": "MD-S-FWD",
+      "to": "MD-S-MID"
+    },
+    {
+      "from": "AN-HATCH-01",
+      "to": "AN-ENTRY"
+    },
+    {
+      "from": "AN-HATCH-01",
+      "to": "MD-S-MID"
+    },
+    {
+      "from": "AN-HATCH-02",
+      "to": "MD-S-MID"
+    },
+    {
+      "from": "AN-HATCH-02",
+      "to": "MD-S-FWD"
+    },
+    {
+      "from": "AN-CRANE-01",
+      "to": "MD-S-MID"
+    },
+    {
+      "from": "AN-CRANE-02",
+      "to": "MD-S-FWD"
+    },
+    {
+      "from": "AN-WINDLASS-01",
+      "to": "MD-FOC"
+    },
+    {
+      "from": "AN-WINCH-MOOR-F",
+      "to": "MD-FOC"
+    },
+    {
+      "from": "AN-WINCH-MOOR-F",
+      "to": "MD-S-FWD"
+    },
+    {
+      "from": "AN-MAST-FWD",
+      "to": "MD-FOC"
+    },
+    {
+      "from": "AN-BOLLARD-F1",
+      "to": "MD-FOC"
+    },
+    {
+      "from": "AN-BOLLARD-F2",
+      "to": "MD-FOC"
+    },
+    {
+      "from": "AN-BOLLARD-M1",
+      "to": "MD-P-MID"
+    },
+    {
+      "from": "AN-BOLLARD-M2",
+      "to": "MD-S-MID"
+    },
+    {
+      "from": "AN-BOLLARD-M3",
+      "to": "MD-P-MID"
+    },
+    {
+      "from": "AN-BOLLARD-M3",
+      "to": "MD-P-HOUSE"
+    },
+    {
+      "from": "AN-BOLLARD-M4",
+      "to": "AN-ENTRY"
+    },
+    {
+      "from": "AN-BOLLARD-A1",
+      "to": "MD-AFT-CL"
+    },
+    {
+      "from": "AN-BOLLARD-A2",
+      "to": "MD-AFT-CL"
+    },
+    {
+      "from": "AN-WINCH-MOOR-A",
+      "to": "MD-AFT-CL"
+    },
+    {
+      "from": "AN-LIFEBOAT-P",
+      "to": "MD-P-HOUSE"
+    },
+    {
+      "from": "AN-LIFEBOAT-S",
+      "to": "MD-S-HOUSE"
+    },
+    {
+      "from": "MD-S-HOUSE",
+      "to": "DOOR-ACC-S"
+    },
+    {
+      "from": "DOOR-ACC-S",
+      "to": "ACC-LOBBY"
+    },
+    {
+      "from": "ACC-LOBBY",
+      "to": "STAIR-ACC"
+    },
+    {
+      "from": "BR-LANDING",
+      "to": "LADDER-FUNNEL"
+    },
+    {
+      "from": "FUNNEL-DECK",
+      "to": "AN-FUNNEL-01"
+    },
+    {
+      "from": "FUNNEL-DECK",
+      "to": "AN-MAST-MAIN"
+    },
+    {
+      "from": "ACC-LOBBY",
+      "to": "DOOR-ER-CASING"
+    },
+    {
+      "from": "DOOR-ER-CASING",
+      "to": "LADDER-ER-TOP"
+    },
+    {
+      "from": "ER-PLAT-TOP",
+      "to": "ER-PLAT-HUB"
+    },
+    {
+      "from": "ER-PLAT-HUB",
+      "to": "DOOR-ECR"
+    },
+    {
+      "from": "DOOR-ECR",
+      "to": "AN-ECR-SWB-FRONT"
+    },
+    {
+      "from": "AN-ECR-SWB-FRONT",
+      "to": "AN-SWB-EMG-01"
+    },
+    {
+      "from": "ER-PLAT-HUB",
+      "to": "AN-ER-PLAT-DG1"
+    },
+    {
+      "from": "ER-PLAT-HUB",
+      "to": "AN-ER-PLAT-DG2"
+    },
+    {
+      "from": "ER-PLAT-HUB",
+      "to": "DOOR-PUR"
+    },
+    {
+      "from": "DOOR-PUR",
+      "to": "PUR-ROOM"
+    },
+    {
+      "from": "PUR-ROOM",
+      "to": "AN-PUR-FO-01"
+    },
+    {
+      "from": "PUR-ROOM",
+      "to": "AN-PUR-LO-01"
+    },
+    {
+      "from": "ER-PLAT-HUB",
+      "to": "ER-PLAT-FWD"
+    },
+    {
+      "from": "ER-PLAT-FWD",
+      "to": "AN-COMP-AIR-01"
+    },
+    {
+      "from": "ER-PLAT-FWD",
+      "to": "AN-COMP-AIR-02"
+    },
+    {
+      "from": "ER-PLAT-HUB",
+      "to": "LADDER-ER-LOWER"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "ER-LOWER-AFT"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "ER-LOWER-FWD"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "ER-LOWER-PORT"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "ER-LOWER-STBD"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "FP-PUMPBAY"
+    },
+    {
+      "from": "FP-PUMPBAY",
+      "to": "AN-ER-PUMP-BAY"
+    },
+    {
+      "from": "ER-LOWER-AFT",
+      "to": "FP-SEACHEST"
+    },
+    {
+      "from": "FP-SEACHEST",
+      "to": "AN-ER-SEACHEST"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "AN-PMP-FW-01"
+    },
+    {
+      "from": "ER-LOWER-HUB",
+      "to": "SPOOL-FW"
+    },
+    {
+      "from": "SPOOL-FW",
+      "to": "AN-ER-HX-FACE"
+    },
+    {
+      "from": "ER-LOWER-FWD",
+      "to": "AN-ER-ME-PORT"
+    },
+    {
+      "from": "ER-LOWER-FWD",
+      "to": "AN-PMP-LO-01"
+    },
+    {
+      "from": "ER-LOWER-FWD",
+      "to": "GUARD-LO"
+    },
+    {
+      "from": "GUARD-LO",
+      "to": "AN-HX-LO-01"
+    },
+    {
+      "from": "ER-LOWER-PORT",
+      "to": "FP-PORT"
+    },
+    {
+      "from": "FP-PORT",
+      "to": "AN-PMP-FO-01"
+    },
+    {
+      "from": "FP-PORT",
+      "to": "AN-ER-BILGE-BAY"
+    },
+    {
+      "from": "ER-LOWER-AFT",
+      "to": "FP-AFT-PORT"
+    },
+    {
+      "from": "FP-AFT-PORT",
+      "to": "AN-ER-BALLAST-BAY"
+    },
+    {
+      "from": "ER-LOWER-AFT",
+      "to": "AN-PMP-FIRE-01"
+    },
+    {
+      "from": "ER-LOWER-AFT",
+      "to": "AN-ER-SHAFT-TUNNEL"
+    },
+    {
+      "from": "ER-LOWER-PORT",
+      "to": "AN-FUEL-P-MANHOLE"
+    },
+    {
+      "from": "ER-LOWER-STBD",
+      "to": "AN-TANK-FO-S"
+    },
+    {
+      "from": "ER-LOWER-AFT",
+      "to": "DOOR-AUX"
+    },
+    {
+      "from": "DOOR-AUX",
+      "to": "AUX-SPACE"
+    },
+    {
+      "from": "AUX-SPACE",
+      "to": "DOOR-STEER"
+    },
+    {
+      "from": "DOOR-STEER",
+      "to": "STEER-ROOM"
+    },
+    {
+      "from": "MD-AFT-CL",
+      "to": "HATCH-STEER"
+    },
+    {
+      "from": "HATCH-STEER",
+      "to": "LADDER-STEER"
+    },
+    {
+      "from": "STEER-ROOM",
+      "to": "AN-STEER-01"
+    },
+    {
+      "from": "STEER-ROOM",
+      "to": "AN-RUDDER-01"
+    },
+    {
+      "from": "STEER-ROOM",
+      "to": "AN-PROP-01"
+    },
+    {
+      "from": "MD-FOC",
+      "to": "HATCH-FOREPEAK"
+    },
+    {
+      "from": "HATCH-FOREPEAK",
+      "to": "LADDER-FOREPEAK"
+    },
+    {
+      "from": "FOREPEAK-FLAT",
+      "to": "AN-THRUSTER-01"
+    },
+    {
+      "from": "STAIR-ACC",
+      "to": "BR-LANDING",
+      "minutes": 0
+    },
+    {
+      "from": "LADDER-FUNNEL",
+      "to": "FUNNEL-DECK",
+      "minutes": 0
+    },
+    {
+      "from": "LADDER-ER-TOP",
+      "to": "ER-PLAT-TOP",
+      "minutes": 0
+    },
+    {
+      "from": "LADDER-ER-LOWER",
+      "to": "ER-LOWER-HUB",
+      "minutes": 0
+    },
+    {
+      "from": "LADDER-STEER",
+      "to": "STEER-ROOM",
+      "minutes": 0
+    },
+    {
+      "from": "LADDER-FOREPEAK",
+      "to": "FOREPEAK-FLAT",
+      "minutes": 0
+    }
+  ]
+}

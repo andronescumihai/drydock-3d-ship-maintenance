@@ -1,0 +1,26 @@
+{
+  "hull": {
+    "tile": 9.6,
+    "size": 2048
+  },
+  "deck": {
+    "tile": 4.8,
+    "size": 1024
+  },
+  "paint": {
+    "tile": 1.6,
+    "size": 1024
+  },
+  "metal": {
+    "tile": 1.0,
+    "size": 1024
+  },
+  "water": {
+    "tile": 24.0,
+    "size": 1024
+  },
+  "foam": {
+    "tile": 6.0,
+    "size": 512
+  }
+}

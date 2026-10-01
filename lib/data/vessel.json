@@ -1,0 +1,332 @@
+{
+  "id": "VSL-DRYDOCK-01",
+  "name": "MV Sample Coaster",
+  "type": "Coastal general cargo vessel (modeled)",
+  "disclaimer": "Modeled sample vessel. Hull form, compartment layout, component list, materials, repair times and dependencies are a documented simulation built for this demo. They are not measurements of any real ship and must not be used for engineering decisions.",
+  "hull": {
+    "lengthOverall": 90,
+    "beam": 14,
+    "depth": 6.5,
+    "draught": 3.85,
+    "parallelMidBody": 0.34,
+    "midshipFullness": 4.2,
+    "bowFullness": 2.1,
+    "sternFullness": 2.9,
+    "transomWidthRatio": 0.46,
+    "sheerForward": 0.85,
+    "sheerAft": 0.35
+  },
+  "superstructure": {
+    "bounds": {
+      "min": {
+        "x": -37,
+        "y": 6.5,
+        "z": -6
+      },
+      "max": {
+        "x": -21,
+        "y": 13.2,
+        "z": 6
+      }
+    },
+    "note": "Modeled: three-tier deckhouse aft, bridge on the top tier."
+  },
+  "decks": [
+    {
+      "id": "DECK-TANKTOP",
+      "name": "Tank Top",
+      "level": 0.0,
+      "note": "Modeled: inner bottom / bilge level, machinery foundations."
+    },
+    {
+      "id": "DECK-ER-PLAT",
+      "name": "Engine Room Platform",
+      "level": 3.2,
+      "note": "Modeled: intermediate grating platform through the machinery space."
+    },
+    {
+      "id": "DECK-MAIN",
+      "name": "Main Deck",
+      "level": 6.5,
+      "note": "Modeled: weather deck, hatch coamings over the cargo holds."
+    },
+    {
+      "id": "DECK-BRIDGE",
+      "name": "Bridge Deck",
+      "level": 11.4,
+      "note": "Modeled: navigation bridge, top tier of the deckhouse."
+    }
+  ],
+  "compartments": [
+    {
+      "id": "CMP-STEERING",
+      "name": "Steering Gear Room",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": -47,
+          "y": 0,
+          "z": -4
+        },
+        "max": {
+          "x": -37,
+          "y": 5.0,
+          "z": 4
+        }
+      },
+      "note": "Modeled: steering gear flat, extended abaft the transom to carry the stern gear."
+    },
+    {
+      "id": "CMP-AUX",
+      "name": "Auxiliary Machinery Space",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": -37,
+          "y": 0,
+          "z": -5
+        },
+        "max": {
+          "x": -30,
+          "y": 3.2,
+          "z": 5
+        }
+      },
+      "note": "Modeled: pumps, air compressors and the shaft tunnel entry."
+    },
+    {
+      "id": "CMP-ECR",
+      "name": "Engine Control Room",
+      "deckId": "DECK-ER-PLAT",
+      "bounds": {
+        "min": {
+          "x": -37,
+          "y": 3.2,
+          "z": -5
+        },
+        "max": {
+          "x": -30,
+          "y": 6.5,
+          "z": 1
+        }
+      },
+      "note": "Modeled: insulated control room with main switchboard and alarm panel."
+    },
+    {
+      "id": "CMP-ER-LOWER",
+      "name": "Engine Room (Lower)",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": -30,
+          "y": 0,
+          "z": -5
+        },
+        "max": {
+          "x": -12,
+          "y": 3.2,
+          "z": 5
+        }
+      },
+      "note": "Modeled: main engine, cooling loop, bilge system at tank-top level."
+    },
+    {
+      "id": "CMP-ER-PLAT",
+      "name": "Engine Room (Platform)",
+      "deckId": "DECK-ER-PLAT",
+      "bounds": {
+        "min": {
+          "x": -30,
+          "y": 3.2,
+          "z": -5
+        },
+        "max": {
+          "x": -12,
+          "y": 6.5,
+          "z": 5
+        }
+      },
+      "note": "Modeled: upper machinery platform, generators and separators."
+    },
+    {
+      "id": "CMP-FUEL-P",
+      "name": "Fuel Oil Tank (Port)",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": -29.5,
+          "y": 1.8,
+          "z": -6.0
+        },
+        "max": {
+          "x": -14.5,
+          "y": 4.2,
+          "z": -4.4
+        }
+      },
+      "note": "Modeled: port wing bunker tank alongside the machinery space."
+    },
+    {
+      "id": "CMP-FUEL-S",
+      "name": "Fuel Oil Tank (Starboard)",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": -29.5,
+          "y": 1.8,
+          "z": 4.4
+        },
+        "max": {
+          "x": -14.5,
+          "y": 4.2,
+          "z": 6.0
+        }
+      },
+      "note": "Modeled: starboard wing bunker tank, mirror of the port tank."
+    },
+    {
+      "id": "CMP-CARGO-1",
+      "name": "Cargo Hold No.1",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": -12,
+          "y": 0,
+          "z": -6.5
+        },
+        "max": {
+          "x": 10,
+          "y": 6.5,
+          "z": 6.5
+        }
+      },
+      "note": "Modeled: aft cargo hold, box-shaped, single hatch."
+    },
+    {
+      "id": "CMP-CARGO-2",
+      "name": "Cargo Hold No.2",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": 10,
+          "y": 0,
+          "z": -6
+        },
+        "max": {
+          "x": 30,
+          "y": 6.5,
+          "z": 6
+        }
+      },
+      "note": "Modeled: forward cargo hold, narrows with the hull form."
+    },
+    {
+      "id": "CMP-FOREPEAK",
+      "name": "Forepeak / Bow Thruster Room",
+      "deckId": "DECK-TANKTOP",
+      "bounds": {
+        "min": {
+          "x": 30,
+          "y": 0,
+          "z": -3.5
+        },
+        "max": {
+          "x": 43,
+          "y": 6.5,
+          "z": 3.5
+        }
+      },
+      "note": "Modeled: forepeak ballast tank and bow thruster tunnel."
+    },
+    {
+      "id": "CMP-BRIDGE",
+      "name": "Navigation Bridge",
+      "deckId": "DECK-BRIDGE",
+      "bounds": {
+        "min": {
+          "x": -36,
+          "y": 11.4,
+          "z": -5.5
+        },
+        "max": {
+          "x": -22,
+          "y": 13.2,
+          "z": 5.5
+        }
+      },
+      "note": "Modeled: wheelhouse, top tier of the deckhouse."
+    },
+    {
+      "id": "CMP-FOREDECK",
+      "name": "Forecastle Deck",
+      "deckId": "DECK-MAIN",
+      "bounds": {
+        "min": {
+          "x": 20,
+          "y": 6.5,
+          "z": -7
+        },
+        "max": {
+          "x": 44,
+          "y": 10.5,
+          "z": 7
+        }
+      },
+      "note": "Modeled: open forecastle with anchor handling and forward mooring."
+    },
+    {
+      "id": "CMP-CARGODECK",
+      "name": "Cargo Deck",
+      "deckId": "DECK-MAIN",
+      "bounds": {
+        "min": {
+          "x": -12,
+          "y": 6.5,
+          "z": -7
+        },
+        "max": {
+          "x": 20,
+          "y": 11.5,
+          "z": 7
+        }
+      },
+      "note": "Modeled: weather deck over the holds, hatch covers and the deck crane."
+    },
+    {
+      "id": "CMP-AFTDECK",
+      "name": "Aft Working Deck",
+      "deckId": "DECK-MAIN",
+      "bounds": {
+        "min": {
+          "x": -44,
+          "y": 6.5,
+          "z": -7
+        },
+        "max": {
+          "x": -12,
+          "y": 11.5,
+          "z": 7
+        }
+      },
+      "note": "Modeled: deck around the house, survival craft and aft mooring."
+    },
+    {
+      "id": "CMP-FUNNEL",
+      "name": "Funnel & Mast Deck",
+      "deckId": "DECK-BRIDGE",
+      "bounds": {
+        "min": {
+          "x": -34,
+          "y": 13.2,
+          "z": -4.5
+        },
+        "max": {
+          "x": -20,
+          "y": 21,
+          "z": 4.5
+        }
+      },
+      "note": "Modeled: uppermost deck carrying the funnel casing and the main mast."
+    }
+  ]
+}
